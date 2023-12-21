@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5F5F5;
+}
+
+/*menu*/
+
+.header {
+    background-color: #001F3F;
+    max-height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#evh-logo {
+    width: 100px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.bar {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.change .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.change .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu-links {
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #000;
+    width: 100%;
+    height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: transform .3s ease-in-out;
+    z-index: 8;
+}
+
+.menu-links.show {
+    transform: translateY(100%);
+    transition: .3s ease-in;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.menu-links a {
+    margin-top: 15px;
+    margin-right: 50px;
+    text-decoration: none;
+    color: #fff;
+    text-align: right;
+    transition: background-color .3s;
+}
+
+.menu-links a:hover {
+    background-color: #333;
+}
+
+.menu.change + .menu-links {
+    display: flex;
+    transform: translateY(0);
+}
+
+/*menu end*/
+
+/*section one*/
+
+#section-1 {
+    background: url(images/students.png);
+    width: 100%;
+    height: 100vh;
+    background-size: 750px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    margin-bottom: 100px;
+}
+
+.section-1-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: left;
+    width: 80%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section-1-container > h1 {
+    font-size: 32px;
+    font-weight: normal;
+    padding-bottom: 15px;
+}
+
+.section-1-container > p {
+    font-size: 20px;
+}
+
+.start-evh {
+    background-color: #19A974;
+    padding: 20px 30px;
+    font-size: 18px;
+    width: max-content;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*end of section-2*/
+
+#section-2 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-2-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+}
+
+.section-2-container > h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.courses-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    height: 300px;
+    width: 350px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card > h2 {
+    font-weight: normal;
+}
+
+.card > p {
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 10px;
+}
+
+.enroll-now-btn {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    background-color: #19A974;
+    color: white;
+    font-size: 18px;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+}
