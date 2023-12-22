@@ -242,7 +242,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
 }
 
 .member-card {
@@ -354,6 +354,7 @@ body {
     }
 
     .member-info > p {
+        width: max-content;
         top: 80%;
         left: 60%;
         transform: translate(-50%, -50%);
