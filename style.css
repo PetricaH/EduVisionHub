@@ -148,13 +148,14 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/*end of section-2*/
+/*end of section-1*/
 
 #section-2 {
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .section-2-container {
@@ -166,11 +167,13 @@ body {
 
 .section-2-container > h1 {
     font-size: 32px;
-    font-weight: bold;
+    font-weight: normal;
+    text-align: center;
     text-transform: uppercase;
 }
 
 .courses-wrapper {
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,3 +212,205 @@ body {
     border: none;
     cursor: pointer;
 }
+
+/*end of section 2*/
+
+#section-3 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-3-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+}
+
+.section-3-container > h1 {
+    font-size: 32px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.members-wrapper {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.member-card {
+    background-color: rgba(75, 75, 75, 0.5);
+    height: 500px;
+    width: 400px;
+    position: relative;
+}
+
+.first-professor {
+    background: url(images/professor-1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.second-professor {
+    background: url(images/professor-2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.third-professor {
+    background: url(images/professor-3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fourth-professor {
+    background: url(images/professor-4.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fifth-professor {
+    background: url(images/professor-5.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.member-card > h1 {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    font-weight: 400;
+    color: white;
+}
+
+.member-card > p {
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    font-weight: 400;
+    color: white;
+}
+
+@media (min-width:1001px) {
+    .member-info,
+    .show-member-info {
+    display: none;
+}
+}
+
+
+@media (max-width: 1000px) {
+    .member-card {
+        background-color: rgba(75, 75, 75, 0.5);
+        height: 500px;
+        width: 50px;
+        position: relative;
+    }
+
+    .member-card > h1,
+    .member-card > p {
+        display: none;
+    }
+
+    .member-info {
+        position: fixed;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .member-info > h1,
+    .member-info > p {
+        color: white;
+        font-weight: normal;
+        position: absolute;
+        z-index: 999;
+    }
+
+    .member-info > h1 {
+        width: max-content;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .member-info > p {
+        top: 80%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+    }
+
+    .professor-image {
+        width: 400px;
+        z-index: 2;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 20px;
+        z-index: 99;
+        background-color: red;
+        padding: 10px 15px;
+        border-radius: 20px;
+    }
+
+    .first-professor {
+        background-position-x: -150px;
+    }
+    
+    .second-professor {
+        background-position-x: -115px;
+    }
+    
+    .third-professor {
+        background-position-x: -145px;
+    }
+    
+    .fourth-professor {
+        background-position-x: -140px;
+    }
+    
+    .fifth-professor {
+        background-position-x: -165px;
+    }    
+
+    .info {
+        color: white;
+    }
+
+    .show-member-info {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+

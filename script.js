@@ -5,3 +5,13 @@ function toggleMenu(element) {
 
     document.body.style.overflow = (menuLinks.classList.contains("show")) ? "hidden" : "auto";
 }
+
+function showInfo(memberClass) {
+    document.querySelector(`.${memberClass} .member-info`).style.display = "flex";
+}
+
+function closeInfo(memberClass) {
+    document.querySelector(`.${memberClass} .member-info`).style.display = "none";
+}
+
+
