@@ -14,4 +14,3 @@ function closeInfo(memberClass) {
     document.querySelector(`.${memberClass} .member-info`).style.display = "none";
 }
 
-
