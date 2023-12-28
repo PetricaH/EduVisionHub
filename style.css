@@ -9,6 +9,10 @@ body {
     background-color: #F5F5F5;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*menu*/
 
 .header {
@@ -17,6 +21,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    z-index: 999;
 }
 
 #evh-logo {
@@ -368,13 +374,12 @@ body {
 
     .close-button {
         position: absolute;
-        top: 10px;
-        right: 30px;
+        top: 105px;
+        right: 35px;
         cursor: pointer;
-        color: #fff;
+        color: white;
         font-size: 20px;
         z-index: 99;
-        background-color: red;
         padding: 10px 15px;
         border-radius: 20px;
     }
@@ -582,6 +587,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    position: relative;
 }
 
 #footer-side > p {
@@ -589,4 +595,18 @@ body {
     opacity: .5;
     padding-left: 5px;
     padding-bottom: 10px;
+}
+
+/*go up button*/
+
+.go-up-btn {
+    background-color: #19A974;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 5vw;
+    bottom: 7vh;
+    cursor: pointer;
 }

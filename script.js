@@ -6,6 +6,14 @@ function toggleMenu(element) {
     document.body.style.overflow = (menuLinks.classList.contains("show")) ? "hidden" : "auto";
 }
 
+// evemt listener to close the menu when a link is clicked
+document.querySelectorAll('.menu-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        var menuButton = document.querySelector('.menu');
+        toggleMenu(menuButton); // closing the menu by toggling the menu button
+    });
+});
+
 function showInfo(memberClass) {
     document.querySelector(`.${memberClass} .member-info`).style.display = "flex";
 }
